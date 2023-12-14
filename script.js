@@ -1,5 +1,5 @@
 // Use strict;
-
+// The images have addres of the image!
 const images = [
     { 'id': '1', 'url': './img/cuteNoob2.png' },
     { 'id': '2', 'url': './img/cuteNoob3.png' },
@@ -26,9 +26,13 @@ const images = [
     { 'id': '23', 'url': './img/cuteNoob24.png' },
 
 ]
-
+//Com o DOM foi capiturado o elemento div container!
 const containerItems = document.querySelector("#container-items");
+
+//Função  para carregar as imagens no browser
 const loadImages = (images, container) => {
+
+    //Para cada imagem na lista terá uma ação.
     images.forEach((image) => {
         container.innerHTML +=
             `
@@ -37,23 +41,27 @@ const loadImages = (images, container) => {
             </div>`
     });
 }
-
 loadImages(images, containerItems);
 
 let items = document.querySelectorAll(".item");
 
 const previous = () => {
+    //Esta ação vai tirar o primeiro elemento e colocalo na ultima possição.
     containerItems.appendChild(items[0]);
-    items = document.querySelectorAll(".item");
+    items = document.querySelectorAll(".item");    
 }
 const next = () => {
+    // Esta ação vai tirar o último e colocar no primeiro.
     const lastItem = items[items.length - 1]
     containerItems.insertBefore(lastItem, items[0]);
     items = document.querySelectorAll(".item");
+    console.log(containerItems)
 }
 
+//Aqui pegamos o botão atraves do DOM.
 let previousButton = document.querySelector("#previous");
 let nextButton = document.querySelector("#next");
 
+//Colocamosum evento click pelo addEventListener
 previousButton.addEventListener("click", previous);
 nextButton.addEventListener("click", next);

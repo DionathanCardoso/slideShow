@@ -6,8 +6,8 @@
 .container-slide{
     display: flex;
     justify-content: space-between;
-    width: 50vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     background-color: black;
     margin: 20vh auto;
     border-radius: 10px;
@@ -17,23 +17,23 @@
 .container-items{
     position: absolute;
     display: flex;
-    width: 50vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     border-radius: 10px;
     overflow: hidden;
     
 }
 .item{
-    width: 50vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     transition: all 1s;
 }
 .item:first-child{
 margin-left: -100%;
 }
 .item img{
-    width: 50vw;
-    height: 50vh;
+    width: 80vw;
+    height: 80vh;
     border-radius: 10px;
 }
 .action-button{
